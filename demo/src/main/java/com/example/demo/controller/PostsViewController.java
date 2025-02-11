@@ -21,10 +21,6 @@ public class PostsViewController {
     public String list(Model model) {
         model.addAttribute("appName", "Моё супер приложение");
         model.addAttribute("posts", postsService.listAllPosts());
-        /*for (Post post : postsService.listAllPosts()){
-            model.addAttribute("posts",post.getText());
-        }*/
-        //postsService.listAllPosts().stream().forEach(post -> model.addAttribute("posts",post));
         return "list";
     }
 
